@@ -22,6 +22,16 @@ Nástroj pro generování QR kódů běžící jako podsložka domény `alba-ros
 
 ## Nasazení
 
-Nasazuje se **automaticky přes GitHub Actions** (workflow `Deploy`) po každém pushi do `main`. Nahrávají se jen změněné soubory přes vlastní FTP účet `w237642_ghqrcode`, který vidí jen složku `/qr-code/`; výsledek přijde na Discord. Co se nenahrává a co je jen na serveru, je v `.github/deploy.json`.
+<!-- ftp:start -->
+Nasazuje se **automaticky přes GitHub Actions** (workflow `Deploy`) po každém pushi do `main`. Nahrávají se jen změněné soubory, výsledek přijde na Discord. Co se nenahrává a co je jen na serveru, je v `.github/deploy.json`.
+
+**FTP účet** (jen pro tuto aplikaci, vidí jen její složku):
+
+Server: 237642.w42.wedos.net (FTPS, explicitní TLS, port 21)  
+Login: w237642_ghqrcode  
+Heslo: jen v GitHub secrets (`FTP_PASSWORD`), repo je veřejné  
+Složka: /www/domains/alba-rosa.cz/qr-code/  
+Web: https://alba-rosa.cz/qr-code/
+<!-- ftp:end -->
 
 FTP na Wedos, podsložka `/qr-code/`.
